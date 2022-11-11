@@ -1,0 +1,11 @@
+<ngb-carousel *ngIf="memberFromMemberDetails.photos">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="memberFromMemberDetails.photos[0].url || './assets/user.png'" alt="Random first slide" width = 100%>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="'./assets/user.png'" alt="Random second slide" width="100%">
+      </div>
+    </ng-template>
