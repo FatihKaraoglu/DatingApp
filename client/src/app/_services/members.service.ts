@@ -27,4 +27,12 @@ export class MembersService {
   getMember(username : string){
     return this.http.get<Member>(this.baseUrl + 'users/' + username)
   }
+
+  addLike(username : string){
+    return this.http.post(this.baseUrl + 'likes/' + username, {});
+  }
+
+  getLikes(predicate: string){
+    return this.http.get(this.baseUrl + 'likes?=' + predicate)
+  }
 }
