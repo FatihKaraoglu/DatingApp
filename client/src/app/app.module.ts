@@ -25,6 +25,8 @@ import { MemberPhotosComponent } from './member-photos/member-photos.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
     ReactiveFormsModule,
     SharedModule,
     NgbModule,
+    PaginationModule,
+    ButtonsModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
